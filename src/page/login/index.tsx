@@ -48,13 +48,13 @@ function Login() {
                             { pattern:/^\w{4,8}$/,message:"用户名必须是4-8位数字字母组合"},
                         ]}
                     >
-                        <Input placeholder="请输入您的用户名" prefix={<UserOutlined/>}/>
+                        <Input placeholder="请输入您的用户名:admin" prefix={<UserOutlined/>}/>
                     </Form.Item>
                     <Form.Item
                         name="password"
                         rules={[{ required: true, message: '密码不能为空' }]}
                     >
-                        <Input.Password placeholder="请输入您的密码" prefix={<LockOutlined/>}/>
+                        <Input.Password placeholder="请输入您的密码:admin123123" prefix={<LockOutlined/>}/>
                     </Form.Item>
                     <Form.Item >
                         <Button 
