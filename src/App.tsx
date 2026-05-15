@@ -22,10 +22,14 @@ function App() {
         const myRoutes = [...routes];
         myRoutes[0].children = routers;
         myRoutes[0].children[0].index = true;
-        const router = createBrowserRouter(myRoutes)
+        const router = createBrowserRouter(myRoutes, {
+          basename: process.env.PUBLIC_URL || "",
+        })
         setRouter(router);
       }else{
-        const router = createBrowserRouter(routes)
+        const router = createBrowserRouter(routes, {
+          basename: process.env.PUBLIC_URL || "",
+        })
         setRouter(router);
       }
     }
